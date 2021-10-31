@@ -9,10 +9,10 @@ This is a very basic setup to showcase how complex workflows depending on AWS se
  - Terraform is installed (https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
 
 
-##### Steps to run example
+##### Steps to setup localstack and run demo
 
 1. Run `docker-compose up` to run localstack via the docker-compose.yml file in repo root directory.
-2. Once localstack is up and running, open up a new terminal and create an ENV variable LAMBDA_LOCATION with the value of the absolute path to the ./lambda directory (e.g. on macOS, `export LAMBDA_LOCATION=/Users/ted/Dev/node-aws-sns-example/lambda`).
+2. Once localstack is up and ready, open up a new terminal and create an env variable LAMBDA_LOCATION, with the value of the absolute path to the lambda directory (e.g. on macOS, `export LAMBDA_LOCATION=<absolute path on host to ./lambda directory>`).
 3. Run the `provision-localstack.sh` bash script.
 4. Once terraform has completed provisioning the AWS services, run `aws --endpoint-url=http://localhost:4566 sns list-topics` and ensure the TopicArn listed is the same specified in publish-sns-message-test.js (line 10). If not, replace the value in the code file with the provisioned SNS TopicArn.
 5. Open up a new terminal and tail the aws log group by running ``aws --endpoint-url=http://localhost:4566 logs tail "/aws/lambda/test-lambda-dev" --follow --format short`.
