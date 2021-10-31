@@ -3,7 +3,7 @@
 # USAGE
 # To run this script, 
 #       a.) make sure localstack is up and running in docker
-#       b.) run 'export LAMBDA_LOCATION=<absolute path to lambda dir in host>' to set the LAMBDA_LOCATION env var.
+#       b.) run 'export LAMBDA_LOCATION=<absolute path to lambda directory>' to set the LAMBDA_LOCATION env var.
 #       b.) execute this bash script
 #
 # NOTE: 

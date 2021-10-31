@@ -7,5 +7,5 @@ variable "XYZ_API_ACCESS_KEY" {
 
 variable "test_lambda_source_directory" {
   type        = string
-  description = "absolute path in host directory to location of lambda directory"
+  description = "absolute path to lambda directory"
 }
