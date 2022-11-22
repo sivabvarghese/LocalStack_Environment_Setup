@@ -19,6 +19,9 @@ const run = async () => {
   try {
     const data = await snsClient.send(new sns.PublishCommand(params));
     console.log("Success.",  data);
+    console.log("Basil was here");
+    console.log("Mentor was also here");
+    
     return data; // For unit tests.
   } catch (err) {
     console.log("SNS Publish Error:", err.stack);
